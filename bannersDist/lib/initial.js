@@ -18,8 +18,6 @@ creative.init = function () {
 		Enabler.addEventListener(studio.events.StudioEvent.INIT, creative.enablerInitHandler);
 	}
 };
-
-
 /**
  * enablerInitHandler
  * Checks if page is loaded, or waits for it to load, then inits pageLoadHandler()

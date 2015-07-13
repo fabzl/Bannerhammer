@@ -1,5 +1,31 @@
 @import "../globalvars";
 
+
+
+// general config 
+
+$borderColour : #000;
+$bodyColour :  #FFF;
+$loadingScreenColour : #666;
+
+
+//animation global values  
+
+$timingFadeIn  : .5s; 
+$timingFadeOut : .5s; 
+$timingStagger : .2s; 
+
+
+
+// fonts 
+
+$fontPrimary : 'Arial';
+$fontSecondary : 'Arial';
+
+
+
+
+
 html {
 	box-sizing: border-box;
 }
@@ -12,8 +38,10 @@ html, body {
 	height:100%;
 	margin: 0;
 	padding: 0;
-	color: $color-text;
+	color: $bodyColour;
 }
+
+
 
 
 /* ==========================================================================
@@ -21,37 +49,52 @@ html, body {
    ========================================================================== */
 .banner {
 	overflow: hidden;
-	box-shadow:inset 0px 0px 1px 1px $color-primary;
+	box-shadow:inset 0px 0px 1px 1px $borderColour;
 	/* This code centres the banners in the viewport */
 	margin-left: auto;
 	margin-right: auto;
 	top: 50%;
 	position: relative;
 	transform: translateY(-50%);
-	color: $color-text;
-	background-color: $color-bg;
-	background-image: linear-gradient(to right, rgba(194,0,8,1) 0%,rgba(190,0,7,1) 54%,rgba(173,0,11,1) 100%);
+	background-image: url("bg.jpg");
 	text-align: center;
 	transform-style-property: flat;
-
 }
-.banner--mpu {
+
+.banner--MPU {
 	width: 300px;
 	height: 250px;
 }
-.banner--leaderboard {
+.banner--DMPU {
+	width: 300px;
+	height: 600px;
+}
+
+.banner--LDB {
 	width: 728px;
 	height: 90px;
 }
-.banner--sky {
+.banner--SKY {
 	width: 120px;
 	height: 600px;
 }
-.banner--widesky {
+.banner--WSKY {
 	width: 160px;
 	height: 600px;
 }
-.banner--expandableBillboard {
+
+.banner--MOB {
+	width: 300px;
+	height: 50px;
+}
+
+
+.banner--WMOB {
+	width: 320px;
+	height: 50px;
+}
+
+.banner--BILL {
 	width: 970px;
 	height: 250px;
 
@@ -60,21 +103,6 @@ html, body {
 	}
 }
 
-/* Add any other sizes here */
-
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-body,
-.font-primary {
-	font-family: $font-family-primary;
-
-}
-.font-secondary {
-	font-family: $font-family-secondary;
-	text-transform: uppercase;
-}
 
 /* ==========================================================================
    Loader
@@ -82,30 +110,24 @@ body,
 .loader {
 	width: 100%;
 	height: 100%;
-	background-color: $color-bg;
+	background-color: $loadingScreenColour;
 }
 
-.loader-content {
-	// matches logo width x height
-	width: 89px;
-	height: 30px;
 
-	opacity: 1;
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+body,
+.font-primary {
+	font-family: 'calibri';
 
-	position: absolute;
-	left: 0; right: 0; top: 0; bottom: 0;
-	margin: auto;
-
-	transform-origin: 50% 50%;
-	animation: bannerLoader 1s ease-in-out 0s infinite;
+}
+.font-secondary {
+	font-family:  'peugeotbold';
+	text-transform: uppercase;
 }
 
-@keyframes bannerLoader {
-	50% {
-		opacity: 0.7;
-		transform: scale(0.7);
-	}
-}
+
 
 
 /* ==========================================================================
@@ -170,4 +192,91 @@ body,
 	right: 0;
 	bottom: 0;
 	left: 0;
+	cursor:pointer;
+}
+
+
+.is-hidden { 
+
+	visible:false;
+
+}
+
+.is-visible { 
+
+	visible:true;
+
+}
+
+
+.it-hasFadeInCTA { 
+
+	animation: fadeInCTA .5s ease-out  1s;
+	animation-fill-mode: forwards;
+
+}
+
+/* ==========================================================================
+  bug fixes
+   ========================================================================== */
+
+
+// fix for rendering problem in mobile safari for small fonts.
+@media screen and (max-device-width: 480px){
+ body {
+   -webkit-text-size-adjust: none;
+ }
+}
+
+
+
+/* ==========================================================================
+   Simple animation Engine 
+   ========================================================================== */
+
+
+
+/*  general fade in */
+@keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*  general fade out */
+@keyframes fadeOut {
+    0%   {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+.it-hasFadeIn {
+	animation: fadeIn $timingFadeIn ease-out ;
+	animation-fill-mode: forwards;
+	opacity: 0;
+} 
+
+.it-hasFadeInDelay {
+	animation: fadeIn $timingFadeIn ease-out $timingStagger ;
+	animation-fill-mode: forwards;
+	opacity: 0;
+} 
+
+.it-hasFadeInDelayX2 {
+	animation: fadeIn $timingFadeIn ease-out $timingStagger*2;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.it-hasFadeInDelayX3 {
+	animation: fadeIn $timingFadeIn ease-out $timingStagger*3;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+
+.it-hasFadeOut {
+
+	animation: fadeOut $timingFadeOut ease-in ;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
