@@ -22,8 +22,7 @@ creative.startBannerAnimation = function  ()
 
 };
 
-// this object will trigger specific functions based on time in miliseconds. 
-
+// this object will trigger specific functions based on time in miliseconds.
 creative.framesTrigger = {
 
 	0: creative.displayFrame0,
