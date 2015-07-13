@@ -1,0 +1,44 @@
+# Project-specific files #
+#################################
+dist/css
+dist/js
+Off-build/
+src/js/libs/dynamicContent.js
+
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# NPM #
+########
+node_modules/
+
+
+# SASS #
+########
+.sass-cache/
+*.scssc
+
+
+# Grunt-compiled files #
+#################################
+*.map
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# Random #
+##########
+*.sublime-*
+.svn
+
