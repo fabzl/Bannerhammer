@@ -1,31 +1,6 @@
 @import "../globalvars";
 
 
-
-// general config 
-
-$borderColour : #000;
-$bodyColour :  #FFF;
-$loadingScreenColour : #666;
-
-
-//animation global values  
-
-$timingFadeIn  : .5s; 
-$timingFadeOut : .5s; 
-$timingStagger : .2s; 
-
-
-
-// fonts 
-
-$fontPrimary : 'Arial';
-$fontSecondary : 'Arial';
-
-
-
-
-
 html {
 	box-sizing: border-box;
 }
@@ -40,8 +15,6 @@ html, body {
 	padding: 0;
 	color: $bodyColour;
 }
-
-
 
 
 /* ==========================================================================
@@ -113,21 +86,26 @@ html, body {
 	background-color: $loadingScreenColour;
 }
 
+.loader-content { 
+
+	position: relative;
+ 	top: 50%;
+  	transform: translateY(-50%);
+
+}
 
 /* ==========================================================================
    Typography
    ========================================================================== */
 body,
 .font-primary {
-	font-family: 'calibri';
+	font-family: $font-family-primary;
 
 }
 .font-secondary {
-	font-family:  'peugeotbold';
+	font-family:  $font-family-secondary;
 	text-transform: uppercase;
 }
-
-
 
 
 /* ==========================================================================
