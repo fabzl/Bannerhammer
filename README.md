@@ -15,9 +15,9 @@ Key Features
 
 Install 
 
- 1.- Clone or Download the REPO
- 2.- run NPM install
- 3.- run Grunt Serve
+ - Clone or Download the REPO
+ - run NPM install
+ - run Grunt Serve
 
 
 
