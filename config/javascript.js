@@ -28,7 +28,7 @@ module.exports.tasks = {
 				sourceMap: false
 			},
 			files : {
-				'<%=config.distDir%>initial.js' : '<%=config.distDir%>initial.js'
+		//		'<%=config.distDir%>/initial.js' : '<%=config.distDir%>/initial.js'
 			}
 		},
 

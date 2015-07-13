@@ -8,7 +8,7 @@ module.exports.tasks = {
 	connect: {
 		site: {
 			options: {
-				open: 'http://0.0.0.0:8000/bannersDist',
+				open: 'http://0.0.0.0:8000/bannersDist/banners',
 				livereload: true
 			}
 		}

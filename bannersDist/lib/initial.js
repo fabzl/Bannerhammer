@@ -24,7 +24,6 @@ creative.init = function () {
  */
 creative.enablerInitHandler = function (event) {
 
-
 	if ( creative.dynamicDataAvailable ) { 
 		creative.dynamicDataAvailable();
 	}
