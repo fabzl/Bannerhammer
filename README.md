@@ -43,8 +43,20 @@ ________________________________________________________________________________
 - make sure that you include a default image for old browsers.  And upload to doubleclick.
 
 
+Authors
+__________________________________________________________________________________
 
 
+Fabian Andrade Valencia
+https://github.com/fabzl/
+
+Ivan Hayes
+https://github.com/munkychop/
+
+Zander Martineau
+https://github.com/mrmartineau/
+  
+enjoy.
 
 
 
