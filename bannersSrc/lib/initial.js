@@ -121,7 +121,7 @@ creative.addDays = function(theDate, days) {
  * &out=20140731&rtn=20140820
  */
 creative.exitClickCreate = function() {
-	console.log("exitClickCreate fired");
+	//console.log("exitClickCreate fired");
 	return creative.dynamicData.exitURL.Url;
 
 };
@@ -129,14 +129,7 @@ creative.exitClickCreate = function() {
 creative.exitClickHandler = function (event) {
 
 	event.preventDefault();
-
-	if (typeof creative.dynamicDataAvailable == 'function') {
-		Enabler.exit("exit", creative.exitClickCreate());
-		console.log('Exit:', creative.exitClickCreate());
-	} else {
-		Enabler.exit("exit", creative.domEl.cta.href);
-		console.log('Exit:', creative.domEl.cta.href);
-	}
+	Enabler.exit("clicktrough");
 	
 };
 
