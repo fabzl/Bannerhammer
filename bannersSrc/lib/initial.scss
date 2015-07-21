@@ -22,7 +22,7 @@ html, body {
    ========================================================================== */
 .banner {
 	overflow: hidden;
-	box-shadow:inset 0px 0px 1px 1px $borderColour;
+	box-shadow:inset 0px 0px 0px 1px $borderColour;
 	/* This code centres the banners in the viewport */
 	margin-left: auto;
 	margin-right: auto;
@@ -81,9 +81,16 @@ html, body {
    Loader
    ========================================================================== */
 .loader {
+	position:absolute;
 	width: 100%;
 	height: 100%;
 	background-color: $loadingScreenColour;
+	top:0;
+	left:0;
+	cursor:pointer;
+	box-shadow:inset 0px 0px 0px 1px $borderColour;
+
+	
 }
 
 .loader-content { 
@@ -91,7 +98,11 @@ html, body {
 	position: relative;
  	top: 50%;
   	transform: translateY(-50%);
+}
 
+.has-border { 
+
+	box-shadow:inset 0px 0px 0px 1px $borderColour;
 }
 
 /* ==========================================================================
@@ -207,11 +218,9 @@ body,
 }
 
 
-
 /* ==========================================================================
    Simple animation Engine 
    ========================================================================== */
-
 
 
 /*  general fade in */
@@ -224,6 +233,14 @@ body,
 @keyframes fadeOut {
     0%   {opacity: 1;}
     100% {opacity: 0;}
+}
+
+// for the loader
+.is-smoothLoaderFading  {
+
+	animation: fadeOut .5s ease-in ;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 
@@ -251,10 +268,13 @@ body,
 	opacity: 0;
 }
 
-
 .it-hasFadeOut {
 
 	animation: fadeOut $timingFadeOut ease-in ;
 	animation-fill-mode: forwards;
 	opacity: 0;
 }
+
+
+
+

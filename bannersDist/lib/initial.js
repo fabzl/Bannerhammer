@@ -28,6 +28,7 @@ creative.enablerInitHandler = function (event) {
 		creative.dynamicDataAvailable();
 	}
 		creative.domEl.tapArea.addEventListener('click', creative.exitClickHandler);
+		creative.domEl.loader.addEventListener('click', creative.exitClickHandler);
 	// Check if page is loaded
 	if (Enabler.isPageLoaded()) {
 		creative.pageLoadHandler();
@@ -72,7 +73,7 @@ creative.onJSLoaded = function () {
 
 creative.onCSSLoaded = function () {
 
-		creative.showAd();
+	creative.smoothHideLoader();
 };
 
 function addAuxiliaryLoader() {
@@ -92,20 +93,28 @@ function doPoll() {
 
 		if(document.styleSheets.length > 1) {
 			removeAuxiliaryLoader();
-			creative.showAd();
+			creative.smoothHideLoader();
 		}
 };
 
+
 creative.showAd = function() {
 
-	// Show banner content
-	document.querySelector('.banner-content').className = "banner-content";
+	
 	// Hide loader
 	document.querySelector('.loader').className = "loader is-hidden";
-
+	// start the creative
 	creative.startBannerAnimation();
 };
 
+creative.smoothHideLoader = function () { 
+
+	// Show banner content
+	document.querySelector('.banner-content').className = "banner-content";
+	document.querySelector('.loader').className = "loader is-smoothLoaderFading";
+
+	setInterval(function(){ creative.showAd(); }, 500);
+}
 /**
  * Add days to today
  * Used in the creative.exitClickCreate() method
@@ -122,7 +131,7 @@ creative.addDays = function(theDate, days) {
  * &out=20140731&rtn=20140820
  */
 creative.exitClickCreate = function() {
-	console.log("exitClickCreate fired");
+	//console.log("exitClickCreate fired");
 	return creative.dynamicData.exitURL.Url;
 
 };
@@ -130,14 +139,7 @@ creative.exitClickCreate = function() {
 creative.exitClickHandler = function (event) {
 
 	event.preventDefault();
-
-	if (typeof creative.dynamicDataAvailable == 'function') {
-		Enabler.exit("exit", creative.exitClickCreate());
-		console.log('Exit:', creative.exitClickCreate());
-	} else {
-		Enabler.exit("exit", creative.domEl.cta.href);
-		console.log('Exit:', creative.domEl.cta.href);
-	}
+	Enabler.exit("clicktrough");
 	
 };
 
