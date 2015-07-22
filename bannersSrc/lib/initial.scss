@@ -100,10 +100,6 @@ html, body {
   	transform: translateY(-50%);
 }
 
-.has-border { 
-
-	box-shadow:inset 0px 0px 0px 1px $borderColour;
-}
 
 /* ==========================================================================
    Typography
@@ -182,6 +178,7 @@ body,
 	bottom: 0;
 	left: 0;
 	cursor:pointer;
+	box-shadow:inset 0px 0px 0px 1px $borderColour;
 }
 
 

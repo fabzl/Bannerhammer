@@ -2,9 +2,6 @@
 @import "../../globalvars";
 @import "../../fonts";
 
-//banner size
-$bannerWidth : 728px;
-$bannerHeight: 90px;
 
 //font sizes
 $display-text-big: 30px;
@@ -45,18 +42,18 @@ $cta-posy: 65px;
    DEFAULT ELEMENTS
    ========================================================================== */
 
-.logo {
+.main-logo {
 
 	position:absolute;
-	left:logo-posx;
-	top:logo-posy;
+	left:$logo-posx;
+	top:$logo-posy;
 }
 
-.cta {
+.cta-btn {
 
 	position:absolute;
-	top:cta-posx;
-	left:cta-posx;
+	top:$cta-posy;
+	left:$cta-posx;
 
 	&.is-visible {
 		display:none;

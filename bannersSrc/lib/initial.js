@@ -112,7 +112,7 @@ creative.smoothHideLoader = function () {
 	document.querySelector('.banner-content').className = "banner-content";
 	document.querySelector('.loader').className = "loader is-smoothLoaderFading";
 
-	setInterval(function(){ creative.showAd(); }, 500);
+	setTimeout(function(){ creative.showAd(); }, 500);
 }
 /**
  * Add days to today
