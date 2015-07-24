@@ -136,16 +136,13 @@ body,
 	display: block;
 }
 
-.is-android
-{
-
-}
-
 .is-inline-block {
 	display:inline-block;
 }
 
-
+.is-inline {
+	display:inline;
+}
 
 .font-smooth
 {
@@ -189,19 +186,6 @@ body,
 	bottom: 0;
 	left: 0;
 	cursor:pointer;
-}
-
-
-.is-hidden { 
-
-	visible:false;
-
-}
-
-.is-visible { 
-
-	visible:true;
-
 }
 
 
