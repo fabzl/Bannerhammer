@@ -16,15 +16,18 @@
 </head>
 <body>
 	<div class="banner banner--MPU">
+		
 		<div class="banner-content is-hidden ">
-
 			<div class="cta-btn">CTA</div>
 			<div class="main-logo" ><img src="logo.png" alt="logo"></div>
 			<a class="tap-area" href="" target="_blank"></a>
 		</div>
+		
 		<div class="loader">
 			<div class="loader-content"><img src="logo.png" alt="loading screen"></div>
 		</div>
+
+		<div class="border"></div>
 	</div>
 
 	<script>
@@ -37,6 +40,7 @@
 			creative.domEl.loader				= document.querySelector('.loader');
 			creative.domEl.banner				= document.querySelector('.banner');
 			creative.domEl.logo					= document.querySelector('.main-logo');
+			creative.domEl.border				= document.querySelector('.border');
 			creative.domEl.tapArea				= document.querySelector('.tap-area');
 			creative.domEl.ctaBtn 				= document.querySelector('.cta-btn');
 			console.log("Setup DOM elements");

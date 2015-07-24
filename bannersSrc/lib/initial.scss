@@ -22,7 +22,6 @@ html, body {
    ========================================================================== */
 .banner {
 	overflow: hidden;
-	box-shadow:inset 0px 0px 0px 1px $borderColour;
 	/* This code centres the banners in the viewport */
 	margin-left: auto;
 	margin-right: auto;
@@ -88,7 +87,6 @@ html, body {
 	top:0;
 	left:0;
 	cursor:pointer;
-	box-shadow:inset 0px 0px 0px 1px $borderColour;
 
 	
 }
@@ -99,6 +97,19 @@ html, body {
  	top: 50%;
   	transform: translateY(-50%);
 }
+
+
+.border { 
+
+	top:0;
+	left:0;
+	box-shadow:inset 0px 0px 0px 1px $borderColour;
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
 
 
 /* ==========================================================================
@@ -178,7 +189,6 @@ body,
 	bottom: 0;
 	left: 0;
 	cursor:pointer;
-	box-shadow:inset 0px 0px 0px 1px $borderColour;
 }
 
 
