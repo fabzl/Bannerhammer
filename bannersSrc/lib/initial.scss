@@ -232,6 +232,8 @@ body,
 	animation: fadeOut .5s ease-in ;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 }
 
 
@@ -239,24 +241,32 @@ body,
 	animation: fadeIn $timingFadeIn ease-out ;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 } 
 
 .it-hasFadeInDelay {
 	animation: fadeIn $timingFadeIn ease-out $timingStagger ;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 } 
 
 .it-hasFadeInDelayX2 {
 	animation: fadeIn $timingFadeIn ease-out $timingStagger*2;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .it-hasFadeInDelayX3 {
 	animation: fadeIn $timingFadeIn ease-out $timingStagger*3;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .it-hasFadeOut {
@@ -264,6 +274,8 @@ body,
 	animation: fadeOut $timingFadeOut ease-in ;
 	animation-fill-mode: forwards;
 	opacity: 0;
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
 }
 
 

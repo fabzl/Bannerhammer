@@ -93,10 +93,6 @@ creative.displayFrame0 = function () {
 		console.log("display frame 0");
 };
 
-function displayFrame0 () { 
-		console.log("display frame 0");
-};
-
 creative.hideFrame0 = function () { 
 
 	console.log("hide frame 0"); 
