@@ -67,7 +67,7 @@ BannerHammer is quite minimalistic but it got some functionalities to make your 
 JS Classes
 __________________________________________________________________________________
 
-	-	creative.hasClass(element, className) = returns true or false if the element contains the class  
+	-	creative.hasClass(className, element) = returns true or false if the element contains the class  
 
 	-	creative.addClass( classname, element ) = securely add the class to an element
 

@@ -145,7 +145,7 @@ creative.exitClickHandler = function (event) {
 /// helper functions 
 
 // return true or false if the element got the class
-creative.hasClass = function (element, className) {
+creative.hasClass = function ( className, element) {
     return element.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(element.className);
 };
 
