@@ -182,8 +182,5 @@ creative.removeFromString = function  (str,value ) {
 
 
 
-
-
-
 // Start creative once all elements in window are loaded.
 window.addEventListener('load', creative.init.bind(creative));

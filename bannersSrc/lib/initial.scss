@@ -281,5 +281,39 @@ body,
 }
 
 
+/* ==========================================================================
+   Cinegraph animation Engine 
+   ========================================================================== */
+
+
+// .cinemagraph-horizontal {
+// 	width: 300px; // define frame w
+// 	height: 600px; // define frame h
+// 	background: url('cinemagraph-sprites.png') left center;// for ver  // top center 
+// 	animation: play-vertical  1s steps(10) infinite;
+// }
+
+// .cinemagraph-vertical {
+// 	width: 300px; // define frame w
+// 	height: 600px; // define frame h
+// 	background: url('cinemagraph-sprites.png') top center;//
+// 	animation: play-horizontal 1s steps(10) infinite;
+// }
+
+// adding and removing this class will pause or resume the animation. 
+// .pause-anim {
+// 	animation-play-state: paused;
+// }
+
+// for horizontal sprites
+// @keyframes play-horizontal {
+// 	100% { background-position: -3000px; } // add total bg length
+// }
+
+//for vertical sprites
+// @keyframes play-vertical {
+// 	100% { background-position: 0 -900px ; } // add total bg height
+// }
+
 
 
