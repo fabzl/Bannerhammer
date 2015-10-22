@@ -10,7 +10,7 @@ creative.adCompleted = false;
 // Checks if Enabler is loaded
 creative.init = function () {
 
-	if( creative.detectIE() ) {
+	creative.detectIE();
 
 		creative.setupDOMElements();
 
@@ -19,7 +19,6 @@ creative.init = function () {
 		} else {
 			Enabler.addEventListener(studio.events.StudioEvent.INIT, creative.enablerInitHandler);
 		}
-	}
 };
 /**
  * enablerInitHandler
