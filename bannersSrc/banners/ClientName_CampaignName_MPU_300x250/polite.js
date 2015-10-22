@@ -17,8 +17,8 @@ creative.adCompleted = false;
 creative.startBannerAnimation = function  ()
 {	
 	//console.dir(creative.dynamicData);
-    creative.createStaticFunctions();
- 	creative.startClock();
+	creative.createStaticFunctions();
+	creative.startClock();
 
 };
 
@@ -37,11 +37,9 @@ creative.framesTriggerObject = {
 	6000: function () { creative.displayFrame2() },
 	6500: function () { creative.hideFrame2() },
 
-
 	//frame 3
 	9000: function () { creative.displayFrame3() },
 	9500: function () { creative.hideFrame3() },
-
 
 	//frame 4
 	12000: function (){ creative.displayFrame4() },
@@ -69,7 +67,7 @@ creative.startClock = function () {
 // tic tac 
 creative.bannerTick = function () { 
 
-	if ( creative.currentTime ==  creative.timeOut )  {		
+	if ( creative.currentTime ==  creative.timeOut )  {
 		clearInterval(creative.clock);
 	}else{ 
 		creative.triggerFrames(creative.currentTime);

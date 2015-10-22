@@ -18,7 +18,6 @@ LazyLoad = (function (doc) {
 				node.setAttribute(attr, attrs[attr]);
 			}
 		}
-
 		return node;
 	}
 

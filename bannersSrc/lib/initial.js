@@ -9,12 +9,16 @@ creative.adCompleted = false;
 
 // Checks if Enabler is loaded
 creative.init = function () {
-	creative.setupDOMElements();
 
-	if (Enabler.isInitialized()) {
-		creative.enablerInitHandler();
-	} else {
-		Enabler.addEventListener(studio.events.StudioEvent.INIT, creative.enablerInitHandler);
+	if( creative.detectIE() ) {
+
+		creative.setupDOMElements();
+
+		if (Enabler.isInitialized()) {
+			creative.enablerInitHandler();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, creative.enablerInitHandler);
+		}
 	}
 };
 /**
@@ -180,7 +184,29 @@ creative.removeFromString = function  (str,value ) {
 	return newStr
 }
 
+/*
+ * detect IE
+ * returns version of IE or false, if browser is not Internet Explorer
+ */
+creative.detectIE = function () {
 
+
+	var bannerContent 	=	document.querySelector('.banner-content');
+	var defaultImg 		=	document.querySelector('#default-img');
+	var loader 			=	document.querySelector('.loader');
+	
+	var isIE9 = /MSIE 9/i.test(navigator.userAgent);
+
+	if (isIE9 )
+	{
+		// alert("IE 9 or below, show static image.");
+		creative.addClass('is-hidden',bannerContent);
+		creative.addClass('is-hidden',loader);
+	} else { 
+		creative.addClass('is-hidden',defaultImg);
+	}
+
+};
 
 // Start creative once all elements in window are loaded.
 window.addEventListener('load', creative.init.bind(creative));
