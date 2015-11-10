@@ -20,6 +20,7 @@ creative.init = function () {
 			Enabler.addEventListener(studio.events.StudioEvent.INIT, creative.enablerInitHandler);
 		}
 };
+
 /**
  * enablerInitHandler
  * Checks if page is loaded, or waits for it to load, then inits pageLoadHandler()
@@ -206,6 +207,21 @@ creative.detectIE = function () {
 	}
 
 };
+
+
+
+var pfx = ["webkit", "moz", "MS", "o", ""];
+creative.prefixedEvent = function (element, type, callback) {
+	for (var p = 0; p < pfx.length; p++) {
+		if (!pfx[p]) type = type.toLowerCase();
+		element.addEventListener(pfx[p]+type, callback, false);
+	}
+}
+
+
+
+
+
 
 // Start creative once all elements in window are loaded.
 window.addEventListener('load', creative.init.bind(creative));
