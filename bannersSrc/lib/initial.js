@@ -168,7 +168,7 @@ creative.addClass = function( classname, element ) {
 // remove a class to an element 
 creative.removeClass = function( classname, element ) {
 
-	var cn = '.'+element.className;
+	var cn = element.className;
 
 	var rxp = new RegExp( "\\s?\\b"+classname+"\\b", "g" );
 	cn = cn.replace( rxp, '' );
