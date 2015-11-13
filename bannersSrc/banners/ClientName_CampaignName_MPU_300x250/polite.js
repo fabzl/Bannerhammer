@@ -62,7 +62,37 @@ creative.createStaticFunctions = function () {
 creative.startClock = function () { 
 
 	creative.clock  = setInterval(function () {creative.bannerTick()}, 100);
+	creative.status = 'playing';
+
 };
+
+creative.stopClock = function () { 
+
+	console.log("creative Paused : ", creative.currentTime );
+	clearInterval(creative.clock);
+	creative.status = 'paused';
+
+}
+
+// if you press enter you will pause and resume the creative 
+creative.keyDownMonitor = function () { 
+
+	document.addEventListener("keydown", function (e)  {
+		console.log(e.keyCode);
+
+		if ( e.keyCode  ===  13 && creative.ifLocal() ) {
+
+			if( creative.status === 'playing') {
+				creative.stopClock();
+			}else { 
+				creative.startClock();
+			}
+		}
+	});
+
+}
+
+
 
 // tic tac 
 creative.bannerTick = function () { 
