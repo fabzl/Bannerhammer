@@ -19,7 +19,7 @@ ________________________________________________________________________________
 Install 
 __________________________________________________________________________________
 
- - Make sure you hve node.js installed
+ - Make sure you have node.js installed
  - Clone or Download the github REPO.
  - open Terminal, navigate to the folder.
  - run npm install (you might need sudo).
